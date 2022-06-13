@@ -5,26 +5,58 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Amazon Ember",Arial,sans-serif;
     background-color: rgb(226, 245, 245);
 }
 
 .bookList {
     width: 90vw;
-    max-width: 1170px;
     margin: 5rem auto;
     display: grid;
     gap: 2rem;
 }
 
+
+
 @media screen and (min-width: 768px) {
     .bookList {
         grid-template-columns: repeat(3, 1fr);
     }
+    .book {
+        width: 28.5vw;
+    }
+    img {
+        width: 23vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    .bookList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .book {
+        width: 40vw
+    }
+    img {
+        width: 30vw
+    };
+}
+@media screen and (max-width: 576px) {
+    .bookList {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    .book {
+        width: 89vw
+    }
+    img {
+        width: 73.7vw
+    };
 }
 
-h2 {
+.title {
     color: #007185;
+    font-size: 14px;
+    margin: 0.5rem 0;
+
 }
 .author {
     color: #007185;
@@ -39,10 +71,12 @@ h2 {
 h6 {
     color: #B12704;
     margin-top: 2px;
+    font-size: 14px;
 }
 
 .book {
     padding: 1rem 2rem;
     background-color: white;
     border-radius: 1rem;
+    
 }
